@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-02-03T14:12:25.113813" rpa="false" schemaversion="5">
+<suite id="s1" name="Alibaba" source="C:\Users\ABN\Desktop\alibaba\task4\robot\alibaba.robot">
+<test id="s1-t1" name="Scenario: User logs in and books a Tehran to Kish tour with Miraj hotel" line="14">
+<kw name="Given User goes to Alibaba site and logs in" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:12:25.720301" level="INFO">Opening browser 'Chrome' to base url 'https://www.alibaba.ir/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-03T14:12:25.719822" elapsed="50.933228"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-03T14:13:16.653542" elapsed="0.122779"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:12:25.718583" elapsed="51.058249"/>
+</kw>
+<kw name="When User navigates to the Tehran-Kish tour page" owner="keywords">
+<kw name="Go to login page" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:13:16.781454" level="INFO">Opening url 'https://www.alibaba.ir/tour/iran-tehran/iran-kish_island?from=2025-01-22&amp;to=2025-01-24&amp;rooms=1'</msg>
+<arg>${HOTEL_PAGE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-02-03T14:13:16.781014" elapsed="31.735217"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-03T14:13:48.516566" elapsed="0.043925"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:13:16.780216" elapsed="31.781141"/>
+</kw>
+<kw name="Go to alibaba login page" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:13:48.563438" level="INFO">Clicking element 'xpath://*[@class='relative']'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:13:48.562851" elapsed="0.254439"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${LOGIN_TXT}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-03T14:13:48.817624" elapsed="0.057510"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:13:48.561989" elapsed="0.313298"/>
+</kw>
+<kw name="Go to login with password page" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:13:48.877076" level="INFO">Clicking element 'xpath=//*[@class='btn is-md is-link']'.</msg>
+<arg>${LOGIN_BY_PASSWORD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:13:48.876384" elapsed="0.252926"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-03T14:13:49.129662" elapsed="0.048174"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:13:48.875763" elapsed="0.302320"/>
+</kw>
+<kw name="Fill in email and password" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:13:49.179416" level="INFO">Clicking element 'xpath://label[contains(text(), 'آدرس ایمیل یا شماره موبایل')]/preceding-sibling::div/input'.</msg>
+<arg>${EMAIL_FIELD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:13:49.179010" elapsed="0.225944"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:13:49.406590" level="INFO">Typing text 'mona.janfada1993@gmail.com' into text field 'xpath://label[contains(text(), 'آدرس ایمیل یا شماره موبایل')]/preceding-sibling::div/input'.</msg>
+<arg>${EMAIL_FIELD}</arg>
+<arg>${USER_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:13:49.405499" elapsed="0.316176"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:13:49.723266" level="INFO">Clicking element 'xpath://*[@type='password']'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:13:49.722323" elapsed="0.133755"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:13:49.857062" level="INFO">Typing text 'mona1390' into text field 'xpath://*[@type='password']'.</msg>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${USER_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:13:49.856423" elapsed="0.175964"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:13:49.178458" elapsed="0.854097"/>
+</kw>
+<kw name="Submit your credentials" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:13:50.033482" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
+<arg>${SUBMIT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:13:50.033181" elapsed="0.222485"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>حساب کاربری</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-02-03T14:13:50.256353" elapsed="0.043053"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:13:50.032785" elapsed="0.266965"/>
+</kw>
+<kw name="Handel vpn popup" owner="keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${VPN_CONFIRM}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-03T14:13:50.301519" elapsed="0.048144"/>
+</kw>
+<msg time="2025-02-03T14:13:50.350136" level="INFO">${popup_exists} = True</msg>
+<var>${popup_exists}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${VPN_CONFIRM}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-02-03T14:13:50.301144" elapsed="0.049116"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-03T14:14:00.352011" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-03T14:13:50.350957" elapsed="10.001192"/>
+</kw>
+<if>
+<branch type="IF" condition="${popup_exists}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:14:00.352814" level="INFO">Clicking element 'css:button[class*='is-solid-secondary']'.</msg>
+<arg>${VPN_CONFIRM}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:14:00.352580" elapsed="0.198507"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T14:14:00.552258" level="INFO">"VPN popup appeared and was closed."</msg>
+<arg>"VPN popup appeared and was closed."</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T14:14:00.551529" elapsed="0.000974"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:14:00.352321" elapsed="0.200324"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>"VPN popup did not appear. Continuing test..."</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-03T14:14:00.553105" elapsed="0.000101"/>
+</kw>
+<status status="NOT RUN" start="2025-02-03T14:14:00.552768" elapsed="0.000537"/>
+</branch>
+<status status="PASS" start="2025-02-03T14:14:00.352275" elapsed="0.201148"/>
+</if>
+<status status="PASS" start="2025-02-03T14:13:50.300421" elapsed="10.253329"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:13:16.778470" elapsed="43.775405"/>
+</kw>
+<kw name="And User selects Miraj hotel" owner="keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOTEL_BUTTON}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-03T14:14:00.555796" elapsed="0.056143"/>
+</kw>
+<msg time="2025-02-03T14:14:00.612185" level="INFO">${Miraj_Hotel} = True</msg>
+<var>${Miraj_Hotel}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${HOTEL_BUTTON}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-02-03T14:14:00.555328" elapsed="0.056909"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-03T14:14:10.612923" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-03T14:14:00.612502" elapsed="10.000695"/>
+</kw>
+<if>
+<branch type="IF" condition="${Miraj_Hotel}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:14:10.615386" level="INFO">Clicking element 'xpath://button[contains(@class, 'btn is-md is-solid-secondary')]'.</msg>
+<arg>${HOTEL_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:14:10.614496" elapsed="0.543798"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T14:14:11.159304" level="INFO">"Miraj hotel appeared and was chosen."</msg>
+<arg>"Miraj hotel appeared and was chosen."</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T14:14:11.158788" elapsed="0.000691"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:14:10.613687" elapsed="0.545956"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>"Miraj hotel did not appear. Continuing test..."</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-03T14:14:11.160093" elapsed="0.000081"/>
+</kw>
+<status status="NOT RUN" start="2025-02-03T14:14:11.159794" elapsed="0.000531"/>
+</branch>
+<status status="PASS" start="2025-02-03T14:14:10.613558" elapsed="0.546894"/>
+</if>
+<status status="PASS" start="2025-02-03T14:14:00.554714" elapsed="10.605902"/>
+</kw>
+<kw name="And User chooses the first available room" owner="keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:14:16.985570" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-45.png"&gt;&lt;img src="selenium-screenshot-45.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-03T14:14:16.986171" level="FAIL">Element 'css:button.btn.is-lg.is-solid-secondary.is-block.my-2:first-of-type' not visible after 5 seconds.</msg>
+<arg>${ROOM_SELECT_BUTTON}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-02-03T14:14:11.172034" elapsed="5.821490">Element 'css:button.btn.is-lg.is-solid-secondary.is-block.my-2:first-of-type' not visible after 5 seconds.</status>
+</kw>
+<msg time="2025-02-03T14:14:16.993909" level="INFO">${Select_Room} = False</msg>
+<var>${Select_Room}</var>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${ROOM_SELECT_BUTTON}</arg>
+<arg>timeout=5s</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-02-03T14:14:11.171648" elapsed="5.822439"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-02-03T14:14:26.995479" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-02-03T14:14:16.994569" elapsed="10.001109"/>
+</kw>
+<if>
+<branch type="IF" condition="${Select_Room}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${ROOM_SELECT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-02-03T14:14:26.996433" elapsed="0.000095"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<arg>"Room selection appeared and was chosen."</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-03T14:14:26.996864" elapsed="0.000105"/>
+</kw>
+<status status="NOT RUN" start="2025-02-03T14:14:26.995920" elapsed="0.001167"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T14:14:26.997605" level="INFO">"Room selection did not appear. Continuing test..."</msg>
+<arg>"Room selection did not appear. Continuing test..."</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T14:14:26.997410" elapsed="0.000272"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:14:26.997201" elapsed="0.000550"/>
+</branch>
+<status status="PASS" start="2025-02-03T14:14:26.995861" elapsed="0.001941"/>
+</if>
+<status status="PASS" start="2025-02-03T14:14:11.171050" elapsed="15.826833"/>
+</kw>
+<kw name="And User selects the first available flight" owner="keywords">
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:14:27.024091" level="INFO">${ALL_WINDOWS} = ['7CE1D19D73222CC365201BA02817E0E7', '78178674044677A75E41A2121721718E', 'A36DFF9AF8B8F0885E174D2D57B00BB8']</msg>
+<var>${ALL_WINDOWS}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-02-03T14:14:26.998904" elapsed="0.025297"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-02-03T14:14:27.024923" level="INFO">All windows: ['7CE1D19D73222CC365201BA02817E0E7', '78178674044677A75E41A2121721718E', 'A36DFF9AF8B8F0885E174D2D57B00BB8']</msg>
+<arg>All windows: ${ALL_WINDOWS}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-02-03T14:14:27.024540" elapsed="0.000524"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-03T14:14:27.025663" level="INFO">${NEW_WINDOW} = 78178674044677A75E41A2121721718E</msg>
+<var>${NEW_WINDOW}</var>
+<arg>${ALL_WINDOWS}[1]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-03T14:14:27.025364" elapsed="0.000347"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${NEW_WINDOW}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:14:27.025886" elapsed="0.050636"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TOUR_SELECT_BUTTON}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-03T14:14:27.076866" elapsed="34.350424"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:15:01.427800" level="INFO">Clicking element 'xpath://button[contains(@class, 'btn is-md is-solid-secondary')]'.</msg>
+<arg>${TOUR_SELECT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:15:01.427527" elapsed="0.113164"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:14:26.998477" elapsed="34.542469"/>
+</kw>
+<kw name="And User enters personal information" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EN_NAME_FIELD}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-03T14:15:01.542558" elapsed="6.985461"/>
+</kw>
+<kw name="Enter first name in latin" owner="keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:15:08.529339" level="INFO">Clicking element 'xpath=//input[@name='name']'.</msg>
+<arg>${EN_NAME_FIELD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:15:08.528942" elapsed="0.177962"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-03T14:15:08.707901" level="INFO">Typing text 'Test User' into text field 'xpath=//input[@name='name']'.</msg>
+<arg>${EN_NAME_FIELD}</arg>
+<arg>Test User</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-03T14:15:08.707249" elapsed="0.188454"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:15:08.528369" elapsed="0.367563"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:15:01.541688" elapsed="7.354387"/>
+</kw>
+<status status="PASS" start="2025-02-03T14:12:25.717176" elapsed="163.179577"/>
+</test>
+<status status="PASS" start="2025-02-03T14:12:25.116089" elapsed="163.783181"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Alibaba" id="s1" pass="1" fail="0" skip="0">Alibaba</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
